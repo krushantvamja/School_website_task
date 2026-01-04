@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,31 +13,494 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="header">
-    <!-- Logo + Register button -->
+    <div class="nav">
+      <div class="nav__logo-wrapper">
+        <img src="assets/icons/logo 1.svg" alt="Premier Schools Exhibition" />
+      </div>
+
+      <a href="#" class="nav__cta">
+        <span class="nav__cta-icon">→</span>
+        <span class="nav__cta-text">Register Now</span>
+      </a>
+    </div>
   </header>
 
   <main id="main-content">
-    <section class="hero" aria-label="Featured Schools">
-      <!-- Dual axis slider -->
+    <section class="hero" aria-label="Premier Schools Exhibition Banner">
+      <div class="hero__inner">
+
+        <!-- LEFT -->
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Discover Gurugram’s <br />
+            <span>Top 30+ Schools</span>
+          </h1>
+
+          <p class="hero__subtitle">ALL IN ONE PLACE</p>
+
+          <div class="hero__event">
+            <div>
+              <strong>Apparel House</strong>
+              <span>Sec 44, Gurugram</span>
+            </div>
+
+            <div class="hero__event-divider"></div>
+
+            <div>
+              <strong>2–3 August 2025</strong>
+              <span>Sat–Sun | 10AM – 6PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✅ MIDDLE COLUMN WRAPPER (ADD THIS) -->
+        <div class="hero__media">
+          <div class="hero__slider">
+
+            <!-- COLUMN 1 -->
+            <div class="hero__column hero__column--slow">
+              <img src="assets/images/15 (1).png" alt="" />
+              <img src="assets/images/17 (1).png" alt="" />
+              <img src="assets/images/18.png" alt="" />
+              <img src="assets/images/16 (1).png" alt="" />
+
+              <!-- duplicate for seamless loop -->
+              <!-- <img src="assets/images/15 (1).png" alt="" />
+              <img src="assets/images/17 (1).png" alt="" />
+              <img src="assets/images/18.png" alt="" />
+              <img src="assets/images/16 (1).png" alt="" /> -->
+            </div>
+
+            <!-- COLUMN 2 -->
+            <div class="hero__column hero__column--medium">
+              <img src="assets/images/23.png" alt="" />
+              <img src="assets/images/24.png" alt="" />
+              <img src="assets/images/25.png" alt="" />
+              <img src="assets/images/26.png" alt="" />
+
+              <!-- <img src="assets/images/23.png" alt="" />
+              <img src="assets/images/24.png" alt="" />
+              <img src="assets/images/25.png" alt="" />
+              <img src="assets/images/26.png" alt="" /> -->
+            </div>
+
+            <!-- COLUMN 3 -->
+            <div class="hero__column hero__column--fast">
+              <img src="assets/images/17 (1).png" alt="" />
+              <img src="assets/images/18.png" alt="" />
+              <img src="assets/images/15 (1).png" alt="" />
+              <img src="assets/images/16 (1).png" alt="" />
+
+              <!-- <img src="assets/images/17 (1).png" alt="" />
+              <img src="assets/images/18.png" alt="" />
+              <img src="assets/images/15 (1).png" alt="" />
+              <img src="assets/images/16 (1).png" alt="" /> -->
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT ENQUIRE CARD -->
+        <aside class="hero__enquiry" aria-labelledby="enquiry-title">
+          <h2 id="enquiry-title" class="hero__enquiry-title">Enquire Now</h2>
+
+          <form class="hero__form">
+            <label class="sr-only" for="parent-name">Parent’s Name</label>
+            <input type="text" id="parent-name" placeholder="Parent’s Name" required />
+
+            <label class="sr-only" for="phone">Phone number</label>
+            <input type="tel" id="phone" placeholder="Phone number" required />
+
+            <label class="sr-only" for="grade">Grade</label>
+            <input type="text" id="grade" placeholder="Which grade are you looking for?" />
+
+            <button type="submit" class="hero__submit">
+              <span>Submit</span>
+              <span class="hero__submit-icon">→</span>
+            </button>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+
+    <section class="trust">
+      <div class="trust__container">
+        <div class="trust__item">
+          <img src="assets/icons/petal2.png" alt="" class="trust__petal" />
+          <div class="trust__text">
+            <strong>1 Million+</strong>
+            <span>Trusted Parents</span>
+          </div>
+          <img src="assets/icons/petal1.png" alt="" class="trust__petal" />
+        </div>
+
+        <div class="trust__item">
+          <img src="assets/icons/petal2.png" alt="" class="trust__petal" />
+          <div class="trust__text">
+            <strong>22+</strong>
+            <span>Years of Legacy</span>
+          </div>
+          <img src="assets/icons/petal1.png" alt="" class="trust__petal" />
+        </div>
+
+        <div class="trust__item">
+          <img src="assets/icons/petal2.png" alt="" class="trust__petal" />
+          <div class="trust__text">
+            <strong>500+</strong>
+            <span>Participating Schools</span>
+          </div>
+          <img src="assets/icons/petal1.png" alt="" class="trust__petal" />
+        </div>
+
+        <div class="trust__item">
+          <img src="assets/icons/petal2.png" alt="" class="trust__petal" />
+          <div class="trust__text">
+            <strong>17 Cities</strong>
+            <span>Across the Globe</span>
+          </div>
+          <img src="assets/icons/petal1.png" alt="" class="trust__petal" />
+        </div>
+      </div>
     </section>
 
     <section class="schools">
-      <!-- Sling animation logos -->
+      <h2 class="schools__title">Participating Schools</h2>
+
+      <div class="schools__grid">
+        <!-- Repeat this card -->
+        <div class="schools__card">
+          <img src="assets/icons/img1.png" alt="Harrow School" />
+        </div>
+
+        <div class="schools__card">
+          <img src="assets/icons/img2.png" alt="Shrewsbury School" />
+        </div>
+
+        <div class="schools__card">
+          <img src="assets/icons/img3.png" alt="King’s College India" />
+        </div>
+
+        <div class="schools__card">
+          <img src="assets/icons/img4.png" alt="Woodstock School" />
+        </div>
+
+        <div class="schools__card">
+          <img src="assets/icons/img5.png" alt="Aga Khan Academy" />
+        </div>
+
+        <div class="schools__card">
+          <img src="assets/icons/img6.png" alt="Delhi Public School" />
+        </div>
+
+        <!-- duplicate for second row -->
+      </div>
+      <div class="schools__grid">
+        <!-- Repeat this card -->
+        <div class="schools__card">
+          <img src="assets/icons/img1.png" alt="Harrow School" />
+        </div>
+
+        <div class="schools__card">
+          <img src="assets/icons/img2.png" alt="Shrewsbury School" />
+        </div>
+
+        <div class="schools__card">
+          <img src="assets/icons/img3.png" alt="King’s College India" />
+        </div>
+
+        <div class="schools__card">
+          <img src="assets/icons/img4.png" alt="Woodstock School" />
+        </div>
+
+        <div class="schools__card">
+          <img src="assets/icons/img5.png" alt="Aga Khan Academy" />
+        </div>
+
+        <div class="schools__card">
+          <img src="assets/icons/img6.png" alt="Delhi Public School" />
+        </div>
+
+        <!-- duplicate for second row -->
+      </div>
     </section>
+
 
     <section class="choose-school">
-      <!-- 4 cards desktop / slider mobile -->
+      <h2 class="choose-school__title">
+        Choose the School That Fits You Best
+      </h2>
+
+      <div class="choose-school__grid">
+        <!-- Card 1 -->
+        <article class="choose-school__card">
+          <img src="assets/images/this1.png" alt="Pre-Schools and Early Learning Centres"
+            class="choose-school__image" />
+          <div class="choose-school__overlay">
+            <h3 class="choose-school__card-title">
+              Pre-Schools & Early Learning Centres
+            </h3>
+            <p class="choose-school__card-text">
+              Nurturing foundational skills for toddlers and pre-primary children.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="choose-school__card">
+          <img src="assets/images/this2.png" alt="K-12 CBSE Day Schools" class="choose-school__image" />
+          <div class="choose-school__overlay">
+            <h3 class="choose-school__card-title">
+              K-12 CBSE Day Schools
+            </h3>
+            <p class="choose-school__card-text">
+              Reputed schools offering complete schooling from Kindergarten to Grade 12.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="choose-school__card">
+          <img src="assets/images/this3.png" alt="Heritage to New-Age Schools" class="choose-school__image" />
+          <div class="choose-school__overlay">
+            <h3 class="choose-school__card-title">
+              Heritage to New-Age Schools
+            </h3>
+            <p class="choose-school__card-text">
+              Time-tested schools to innovative pedagogy, tech-enabled, future-ready schools.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="choose-school__card">
+          <img src="assets/images/this4.png" alt="International Curriculum Schools" class="choose-school__image" />
+          <div class="choose-school__overlay">
+            <h3 class="choose-school__card-title">
+              International Curriculum Schools
+            </h3>
+            <p class="choose-school__card-text">
+              Offering IB, Cambridge, Finnish and other global curricula with a global learning environment.
+            </p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="exhibition">
-      <!-- Exhibition slider -->
+    <section class="appointment">
+      <!-- Banner Image -->
+      <img src="assets/images/banner_down.png" alt="Parents discussing school appointments at exhibition"
+        class="appointment__image" />
+
+      <!-- Overlay Content -->
+      <div class="appointment__overlay">
+        <p class="appointment__eyebrow">
+          Exciting Opportunities for Parents!
+        </p>
+
+        <h2 class="appointment__title">
+          Pre-schedule Your <br />
+          School Appointments
+        </h2>
+
+        <p class="appointment__subtitle">
+          To Avoid Rush
+        </p>
+
+        <a href="#" class="appointment__cta">
+          <span>Pre-schedule Now</span>
+          <span class="appointment__cta-icon">→</span>
+        </a>
+      </div>
     </section>
+
+
+    <section class="attractions">
+      <div class="attractions__inner">
+        <!-- LEFT: Diamond Image Grid -->
+        <div class="attractions__media">
+          <div class="diamond-grid">
+            <div class="diamond">
+              <img src="assets/images/that1.png" alt="Kids performance" />
+            </div>
+            <div class="diamond">
+              <img src="assets/images/that2.png" alt="Child on stage" />
+            </div>
+            <div class="diamond">
+              <img src="assets/images/that3.png" alt="Kids singing" />
+            </div>
+            <div class="diamond">
+              <img src="assets/images/that4.png" alt="Award ceremony" />
+            </div>
+          </div>
+        </div>
+
+        <!-- ⭐ CENTER: Star Logo -->
+        <div class="attractions__center">
+          <img src="assets/images/star_img.png" alt="Premier Kidz Awards Logo" />
+        </div>
+
+        <!-- RIGHT: Content -->
+        <div class="attractions__content">
+          <h2 class="attractions__title">
+            Other Attractions for <br />
+            Parents & Kids
+          </h2>
+
+          <div class="attractions__tabs">
+            <button class="attractions__tab attractions__tab--active">
+              Premier Kidz Awards
+            </button>
+            <button class="attractions__tab">
+              The Parent Exchange
+            </button>
+          </div>
+
+          <h3 class="attractions__subtitle">Premier Kidz Awards</h3>
+          <p class="attractions__text">
+            A prestigious platform celebrating young talent and building confidence
+            by giving children the spotlight to shine.
+          </p>
+
+          <a href="#" class="attractions__cta">
+            <span>To Know More</span>
+            <span class="attractions__cta-icon">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights" aria-labelledby="highlights-title">
+      <!-- Banner Image -->
+      <img src="assets/images/BG.jpg" alt="" class="highlights__bg" />
+
+      <h2 id="highlights-title" class="highlights__title">
+        What Makes This Exhibition a Must-Visit
+      </h2>
+
+      <div class="highlights__slider-wrapper">
+        <button class="highlights__nav highlights__nav--prev" aria-label="Previous">
+          ←
+        </button>
+
+        <div class="highlights__slider" role="region" aria-roledescription="carousel">
+          <div class="highlights__track">
+            <!-- Card 1 -->
+            <article class="highlights__card">
+              <img src="assets/icons/icon1.png" alt="" class="highlights__icon" />
+              <h3>Interact Directly with School Heads</h3>
+              <p>Get answers straight from the experts</p>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="highlights__card">
+              <img src="assets/icons/icon2.png" alt="" class="highlights__icon" />
+              <h3>Compare Curriculum & Pedagogy</h3>
+              <p>
+                Understand the differences between CBSE, ICSE, IB, Cambridge,
+                Finnish & more
+              </p>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="highlights__card">
+              <img src="assets/icons/icon3.png" alt="" class="highlights__icon" />
+              <h3>Get Exclusive Fee Structures & Offers</h3>
+              <p>Access transparent information and avail offers</p>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="highlights__card">
+              <img src="assets/icons/icon4.png" alt="" class="highlights__icon" />
+              <h3>Explore Schools Offerings</h3>
+              <p>
+                Preview infrastructure, co-curriculars, teaching methodology and
+                culture
+              </p>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="highlights__card">
+              <img src="assets/icons/icon5.png" alt="" class="highlights__icon" />
+              <h3>On-the-Spot Counselling</h3>
+              <p>Save time with instant application guidance</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="highlights__nav highlights__nav--next" aria-label="Next">
+          →
+        </button>
+      </div>
+    </section>
+
+    <section class="topbar" aria-label="Contact information">
+      <div class="topbar__container">
+
+        <!-- Logo -->
+        <div class="topbar__logo">
+          <img src="assets/icons/logo 1.svg" alt="Premier Schools Exhibition" class="topbar__logo-img" />
+        </div>
+
+        <!-- Corporate Office -->
+        <div class="topbar__item">
+          <img src="assets/icons/location.png" alt="" aria-hidden="true" class="topbar__icon" />
+          <div class="topbar__content">
+            <h3 class="topbar__heading">Corporate Office:</h3>
+            <p>
+              Suite B-5, Ballygunge Park Tower,<br />
+              67B Ballygunge Circular Road,<br />
+              Kolkata – 700019
+            </p>
+          </div>
+        </div>
+
+        <!-- Ahmedabad Office -->
+        <div class="topbar__item">
+          <img src="assets/icons/location.png" alt="" aria-hidden="true" class="topbar__icon" />
+          <div class="topbar__content">
+            <h3 class="topbar__heading">Ahmedabad Office:</h3>
+            <p>
+              12/A, Swastik Chambers, Near CU Shah College,<br />
+              Ashram Road, Ahmedabad – 380009
+            </p>
+          </div>
+        </div>
+
+        <!-- Call -->
+        <div class="topbar__item">
+          <img src="assets/icons/call.png" alt="" aria-hidden="true" class="topbar__icon" />
+          <div class="topbar__content">
+            <h3 class="topbar__heading">Call us on</h3>
+            <a href="tel:9674805912">9674805912</a><br />
+            <a href="tel:9674585012">9674585012</a>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <nav class="topbar__social" aria-label="Follow us on social media">
+          <span class="topbar__social-label">Follow us on</span>
+          <a href="#" aria-label="Instagram">
+            <img src="assets/icons/instagra,.png" alt="" />
+          </a>
+          <a href="#" aria-label="Facebook">
+            <img src="assets/icons/facebook.png" alt="" />
+          </a>
+          <a href="#" aria-label="YouTube">
+            <img src="assets/icons/youtube.png" alt="" />
+          </a>
+        </nav>
+
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
-    <!-- Footer -->
+    <p>Copyright &copy; <span id="current-year"></span> | All Rights Reserved. Premier Schools Exhibition</p>
   </footer>
 
   <script src="js/main.js" defer></script>
 </body>
+
 </html>
