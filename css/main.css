@@ -283,6 +283,115 @@ body {
   transform: translateX(6px);
 }
 
+.hero__mobile-media {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* Hide heavy slider */
+  .hero__media {
+    display: none;
+  }
+
+  /* Show mobile images */
+  .hero__mobile-media {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .hero__mobile-media img {
+    width: 92px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+  }
+
+  /* Center text for mobile hero */
+  .hero__content {
+    text-align: center;
+  }
+
+  .hero__event {
+    margin: 24px auto 0;
+  }
+  .hero__enquiry{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    overflow-x: hidden;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    gap: 32px;
+  }
+
+  /* TEXT BLOCK */
+  .hero__content {
+    max-width: 100%;
+    padding-top: 100px;
+    padding-bottom: 0;
+    text-align: left;
+  }
+
+  .hero__title {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .hero__subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  /* EVENT PILL */
+  .hero__event {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .hero__event-divider {
+    display: none;
+  }
+
+  /* ❌ HIDE IMAGE SLIDER ON MOBILE */
+  .hero__media {
+    display: none;
+  }
+
+  /* ENQUIRY CARD */
+  .hero__enquiry {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .hero__enquiry-title {
+    font-size: 20px;
+  }
+
+  .hero__form input {
+    font-size: 14px;
+  }
+
+  .hero__submit {
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
 /*TRUST / STATS SECTION*/
 .trust {
   background: #ffffff;
@@ -327,6 +436,25 @@ body {
   opacity: 0.8;
 }
 
+/* responsive petals*/
+@media (max-width: 768px) {
+  .trust__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .trust__item {
+    justify-content: center;
+  }
+
+  .trust__text strong {
+    font-size: 16px;
+  }
+
+  .trust__text span {
+    font-size: 13px;
+  }
+}
 /* PARTICIPATING SCHOOLS*/
 .schools {
   background: #ffffff;
@@ -445,6 +573,91 @@ body {
 .choose-school__image {
   transition: transform 0.4s ease;
 }
+
+/* mobile slider for choose school */
+.schools__slider {
+  display: block;
+}
+
+.schools__dots {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .schools {
+    padding: 32px 16px 64px;
+  }
+
+  /* Slider wrapper */
+  .schools__slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .schools__slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Each grid = ONE SLIDE */
+  .schools__grid {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    scroll-snap-align: start;
+  }
+
+  /* Card size */
+  .schools__card {
+    height: 96px;
+  }
+
+  /* Pagination dots */
+  .schools__dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  .schools__dots span {
+    width: 8px;
+    height: 8px;
+    background: #d1d1d1;
+    border-radius: 50%;
+  }
+
+  .schools__dots span:first-child {
+    background: #6b2ea8;
+  }
+}
+
+@media (max-width: 768px) {
+  .choose-school {
+    padding: 20px 16px 80px;
+  }
+
+  .choose-school__grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .choose-school__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .choose-school__card {
+    min-width: 85%;
+    height: 360px;
+    scroll-snap-align: center;
+  }
+}
+
 
 /*PRE-SCHEDULE SECTION */
 .appointment {
@@ -701,6 +914,59 @@ body {
   transform: translateX(6px);
 }
 
+@media (max-width: 768px) {
+
+  /* Stack layout for mobile */
+  .attractions__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  /* Hide center star (desktop position) */
+  .attractions__center {
+    display: none;
+  }
+
+  /* Resize diamond grid */
+  .diamond-grid {
+    width: 260px;
+    height: 260px;
+    gap: 16px;
+    margin: 0 auto;
+  }
+
+  /* ❌ Hide ONLY first diamond image */
+  .diamond-grid .diamond:first-child {
+    display: none;
+  }
+
+  /* ⭐ Inject star visually using ::before */
+  .diamond-grid::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("assets/images/star_img.png") center / 70% no-repeat;
+    transform: rotate(-45deg);
+    z-index: 2;
+  }
+
+  /* Needed for pseudo-element positioning */
+  .diamond-grid {
+    position: relative;
+  }
+
+  /* Content spacing */
+  .attractions__title {
+    font-size: 26px;
+  }
+
+  .attractions__tabs {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 
 /* MUST VISIT HIGHLIGHTS*/
 .highlights {
@@ -791,6 +1057,38 @@ body {
   margin: 0 12px;
   flex-shrink: 0;
 }
+
+
+@media (max-width: 768px) {
+
+  .highlights {
+    padding: 60px 16px 80px;
+  }
+
+  /* Disable slider behavior */
+  .highlights__slider {
+    overflow: visible;
+  }
+
+  .highlights__track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* Two cards per row */
+  .highlights__card {
+    min-width: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Hide slider arrows (not needed in grid) */
+  .highlights__nav {
+    display: none;
+  }
+}
+
 
 /*Topbar Section */
 .topbar {
@@ -934,16 +1232,7 @@ body {
 }
 
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .highlights__title {
-    font-size: 24px;
-  }
 
-  .highlights__card {
-    min-width: 240px;
-  }
-}
 
 
 /*   RESPONSIVE*/
